@@ -1,0 +1,112 @@
+.list-project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px 16px;
+    position: relative;
+}
+
+.list-project .portfolio-project {
+    display: flex;
+    flex-direction: column;
+    width: 392px;
+    height: 420px;
+    align-items: flex-start;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: var(--bg-tertiary);
+}
+
+.list-project .picture {
+    display: flex;
+    flex-direction: column;
+    height: 220.5px;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+}
+
+.list-project .image {
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    width: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+.list-project .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.list-project .highlight-underine {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.list-project .title-here {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Tektur-SemiBold", Helvetica;
+    font-weight: 600;
+    color: var(--btn-1-normal);
+    font-size: 24px;
+    letter-spacing: 1.20px;
+    line-height: normal;
+}
+
+.list-project .rectangle {
+    position: relative;
+    width: 40px;
+    height: 4px;
+    background-color: var(--btn-1-normal);
+}
+
+.list-project .project-sumary {
+    position: relative;
+    align-self: stretch;
+    font-family: "Tektur-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--txt-gray);
+    font-size: 16px;
+    letter-spacing: 0.80px;
+    line-height: normal;
+}
+
+.list-project .role-tech {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    flex: 1;
+    flex-grow: 1;
+}
+
+.list-project .text-wrapper {
+    position: relative;
+    width: fit-content;
+    font-family: "Tektur-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--txt-light-gray);
+    font-size: 14px;
+    letter-spacing: 0.70px;
+    line-height: normal;
+}

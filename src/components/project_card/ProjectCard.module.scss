@@ -1,0 +1,102 @@
+@use '@scss_mixin' as *;
+@use '@scss_variables' as v;
+
+.portfolio_item {
+  @include flex-column(flex-start, flex-start);
+  background-color: v.$bg-secondary;
+  border-radius: v.$border-radius-md;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .item_image {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+
+    .image_container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .placeholder_image {
+      width: 100%;
+      height: 100%;
+      background-color: v.$bg-tertiary;
+      background-image: linear-gradient(
+        45deg,
+        v.$bg-accent 25%,
+        transparent 25%,
+        transparent 50%,
+        v.$bg-accent 50%,
+        v.$bg-accent 75%,
+        transparent 75%,
+        transparent
+      );
+      background-size: 20px 20px;
+    }
+  }
+
+  .item_content {
+    width: 100%;
+    padding: v.$spacing-md;
+    @include flex-column(flex-start, flex-start, v.$spacing-sm);
+
+    .item_title {
+      font-size: v.$fz-big;
+      font-weight: v.$font-semibold;
+      color: v.$txt-black;
+    }
+
+    .item_category {
+      font-size: v.$fz-small;
+      color: v.$txt-light-gray;
+      text-transform: uppercase;
+      letter-spacing: v.$letter-spacing;
+    }
+
+    .item_description {
+      color: v.$txt-gray;
+      margin: v.$spacing-xs 0;
+      font-size: v.$fz-normal;
+    }
+
+    .technologies {
+      @include flex-row(flex-start, center, v.$spacing-xs);
+      flex-wrap: wrap;
+      margin-top: v.$spacing-xs;
+
+      .tech_tag {
+        background-color: v.$bg-tertiary;
+        color: v.$txt-gray;
+        padding: calc(v.$unit / 2) v.$unit;
+        border-radius: v.$border-radius-sm;
+        font-size: v.$fz-small;
+      }
+    }
+
+    .view_project {
+      margin-top: v.$spacing-sm;
+      color: v.$btn-1-normal;
+      text-decoration: none;
+      font-weight: v.$font-semibold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: v.$btn-1-hover;
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: v.$btn-1-active;
+      }
+    }
+  }
+}

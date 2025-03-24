@@ -14,3 +14,13 @@ export interface SvgIconProps {
   height?: number;
   fill?: string;
 }
+
+export interface ProjectCard {
+  id: number;
+  title: string;
+  category: string;
+  imageUrl: string;
+  description: string;
+  technologies: string[];
+  link?: string;
+}

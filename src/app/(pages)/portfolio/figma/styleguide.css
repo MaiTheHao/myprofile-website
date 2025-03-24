@@ -1,0 +1,18 @@
+:root {
+    --bg-primary: rgba(255, 255, 255, 1);
+    --bg-secondary: rgba(245, 245, 245, 1);
+    --bg-tertiary: rgba(220, 220, 220, 1);
+    --bg-accent: rgba(169, 169, 169, 1);
+    --btn-1-normal: rgba(0, 200, 255, 1);
+    --btn-1-hover: rgba(0, 180, 235, 1);
+    --btn-1-active: rgba(0, 160, 215, 1);
+    --bt-2-normal: rgba(255, 255, 255, 1);
+    --bt-2-hover: rgba(211, 211, 211, 1);
+    --bt-2-active: rgba(37, 37, 37, 1);
+    --txt-black: rgba(37, 37, 37, 1);
+    --txt-gray: rgba(60, 60, 60, 1);
+    --txt-dark: rgba(27, 27, 27, 1);
+    --txt-link: rgba(0, 102, 204, 1);
+    --txt-white: rgba(255, 255, 255, 1);
+    --txt-light-gray: rgba(169, 169, 169, 1);
+}

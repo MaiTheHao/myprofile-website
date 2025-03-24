@@ -1,0 +1,81 @@
+@use '@scss_mixin' as *;
+@use '@scss_variables' as v;
+
+.container {
+  position: relative;
+  @include flex-column(flex-start, flex-start, v.$unit * 5);
+  @include section-padding;
+}
+
+.portfolio_header {
+  width: 100%;
+  @include flex-column(flex-start, flex-start, v.$spacing-md);
+  margin-bottom: v.$spacing-lg;
+
+  .portfolio_title {
+    @include HL_title_large;
+  }
+
+  .portfolio_description {
+    max-width: 800px;
+    color: v.$txt-gray;
+    line-height: 1.6;
+    font-size: v.$fz-normal;
+  }
+}
+
+.filter_section {
+  width: 100%;
+  @include flex-row(flex-start, center, v.$spacing-md);
+  margin-bottom: v.$spacing-lg;
+
+  .filter_button {
+    padding: v.$spacing-xs v.$spacing-sm;
+    background-color: v.$btn-2-normal;
+    border: 1px solid v.$bg-tertiary;
+    border-radius: v.$border-radius-sm;
+    color: v.$txt-gray;
+    font-size: v.$fz-normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: v.$btn-2-hover;
+    }
+
+    &:active,
+    &.active {
+      background-color: v.$btn-1-normal;
+      color: v.$txt-white;
+      border-color: v.$btn-1-normal;
+    }
+  }
+}
+
+.portfolio_items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: v.$spacing-lg;
+}
+
+// Media queries for responsive layout
+@media screen and (max-width: 768px) {
+  .portfolio_items {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .filter_section {
+    overflow-x: auto;
+    padding-bottom: v.$spacing-sm;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: v.$bg-tertiary;
+      border-radius: 4px;
+    }
+  }
+}
