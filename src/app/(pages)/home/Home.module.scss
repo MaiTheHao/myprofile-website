@@ -1,0 +1,28 @@
+@use '@scss_variables' as v;
+@use '@scss_mixin' as *;
+
+.container {
+  position: relative;
+  @include flex-row(left, flex-end, v.$spacing-xl);
+
+  .right {
+    @include flex-column(left, flex-start, v.$spacing-md);
+
+    &_contents {
+      max-width: v.$unit * 57;
+
+      .content {
+        @include flex-column(flex-start, flex-start, v.$spacing-sm);
+
+        &_title {
+          @include HL_title_large;
+        }
+
+        &_detail {
+          font-size: v.$fz-normal;
+          color: v.$txt-gray;
+        }
+      }
+    }
+  }
+}

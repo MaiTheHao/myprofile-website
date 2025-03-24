@@ -1,0 +1,51 @@
+@use '@scss_mixin' as *;
+@use '@scss_variables' as v;
+
+.container {
+  position: relative;
+  @include flex-column(flex-start, flex-start, v.$unit * 5);
+}
+
+.sumary_info {
+  position: relative;
+  height: 350px;
+  @include flex-row(left);
+
+  .main_picture {
+    position: relative;
+    @include flex-row(center, center);
+  }
+
+  .about_me {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include flex-column(space-between, flex-start);
+    padding: v.$spacing-lg;
+
+    &_title {
+      @include HL_title_large;
+    }
+
+    section {
+      gap: 1ch;
+      span {
+        font-weight: v.$font-semibold;
+      }
+    }
+  }
+}
+
+.detail_info {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @include flex-row(flex-start, flex-start, v.$spacing-xl);
+
+  .left_column,
+  .right_column {
+    flex: 1 1 0;
+    overflow: hidden;
+    @include flex-column(flex-start, flex-start, v.$spacing-lg);
+  }
+}

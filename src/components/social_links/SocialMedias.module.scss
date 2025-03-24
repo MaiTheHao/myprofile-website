@@ -1,0 +1,65 @@
+@use '@scss_variables' as v;
+
+$icon_padding: v.$unit * 0.2;
+
+.list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: v.$unit * 2 - ($icon_padding * 2);
+
+  .media {
+    aspect-ratio: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: v.$unit * 2 + ($icon_padding * 2);
+    height: v.$unit * 2 + ($icon_padding * 2);
+    padding: $icon_padding;
+    border-radius: 50%;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+
+    &:not(:hover) {
+      color: v.$txt-gray;
+    }
+
+    &.facebook:hover {
+      background-color: v.$facebook;
+      color: v.$white;
+    }
+
+    &.twitter:hover {
+      background-color: v.$twitter;
+      color: v.$white;
+    }
+
+    &.google:hover {
+      background-color: v.$google;
+      color: v.$white;
+    }
+
+    &.linkedin:hover {
+      background-color: v.$linkedin;
+      color: v.$white;
+    }
+
+    &.instagram:hover {
+      background-color: v.$instagram;
+      color: v.$white;
+    }
+
+    &.github:hover {
+      background-color: v.$github;
+      color: v.$white;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use '@scss_variables' as v;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: v.$txt-gray;
+  font-weight: v.$font-semibold;
+
+  &_category {
+    font-size: v.$fz-small;
+  }
+
+  &_name {
+    font-size: v.$fz-large;
+    color: v.$txt-black;
+  }
+
+  &_location {
+    font-size: v.$fz-normal;
+    font-weight: v.$font-regular;
+  }
+}

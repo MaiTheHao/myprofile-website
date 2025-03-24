@@ -1,0 +1,49 @@
+@use '@scss_mixin' as *;
+@use '@scss_variables' as v;
+
+.info_section {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: v.$unit * 2; // 16px
+
+  .section_title {
+    @include HL_title_normal;
+  }
+
+  .section_content {
+    align-self: stretch;
+    padding-left: v.$unit * 2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: v.$unit + 2; // 10px
+    list-style-type: none; // Remove default bullets
+
+    li {
+      user-select: none;
+      align-self: stretch;
+      color: v.$txt-gray;
+      font-size: v.$fz-normal;
+      font-weight: v.$font-regular;
+      letter-spacing: 0.8px;
+      margin-bottom: v.$unit;
+      position: relative;
+      padding-left: v.$unit * 2.5;
+      transition: transform 0.2s ease, color 0.2s ease;
+
+      &:before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: v.$txt-gray;
+        font-weight: bold;
+      }
+    }
+  }
+}

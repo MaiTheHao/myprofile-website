@@ -1,0 +1,30 @@
+@use '@scss_variables' as v;
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$unit * 3;
+
+  .icon{
+    svg{
+      color: v.$btn-1-normal;
+      aspect-ratio: 1;
+      width: v.$unit * 10;
+    }
+  }
+
+  .detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: v.$unit * 2;
+    text-transform: uppercase;
+
+    .title{
+      font-size: v.$fz-large;
+      color: v.$btn-1-normal;
+      font-weight: v.$font-semibold;
+    }
+  }
+}

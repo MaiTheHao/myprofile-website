@@ -1,0 +1,41 @@
+@use '@scss_variables' as v;
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: v.$unit * 2;
+
+  .element {
+    padding: calc(v.$unit / 2) (v.$unit);
+    color: v.$txt-light-gray;
+    transition: color 0.25s ease-in, transform 0.15s ease-out;
+
+    &_normal {
+      font-size: v.$fz-big;
+
+      &:hover {
+        color: v.$txt-gray;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+
+    &_activated {
+      font-size: v.$fz-large;
+      border-bottom: 2px solid v.$txt-gray;
+      color: v.$txt-gray;
+
+      animation: bigger 0.25s ease-in-out;
+    }
+
+    @keyframes bigger {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use '@scss_variables' as v;
+
+@mixin title($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: v.$btn-1-normal;
+  text-transform: capitalize;
+}
+
+@mixin HL_title_normal {
+  @include title(v.$fz-large, v.$font-semibold);
+  &::after {
+    content: '';
+    display: block;
+    width: calc(5 * v.$unit);
+    height: calc(v.$unit / 2);
+    background-color: v.$btn-1-normal;
+  }
+}
+
+@mixin HL_title_large {
+  @include title(v.$fz-huge, v.$font-bold);
+  &::after {
+    content: '';
+    display: block;
+    width: calc(5 * v.$unit);
+    height: calc(v.$unit / 2);
+    background-color: v.$btn-1-normal;
+  }
+}
+
+@mixin flex-row($justify: flex-start, $align: center, $gap: v.$unit) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flex-column($justify: flex-start, $align: flex-start, $gap: v.$unit) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin section-padding {
+  padding: v.$spacing-lg;
+}
+
+@mixin responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

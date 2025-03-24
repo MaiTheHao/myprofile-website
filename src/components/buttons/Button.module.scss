@@ -1,0 +1,27 @@
+@use "@scss_variables" as v;
+
+.container {
+  user-select: none;
+  position: relative;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+
+  font-size: v.$fz-normal;
+  text-transform: capitalize;
+  padding: calc(v.$unit / 2) (v.$unit * 2);
+}
+
+.highlightButton {
+  border: 2px solid v.$btn-1-normal;
+  color: v.$txt-black;
+  transition: all .3s ease-out;
+
+  &:hover {
+    background-color: v.$btn-1-normal;
+    color: v.$txt-white;
+  }
+}

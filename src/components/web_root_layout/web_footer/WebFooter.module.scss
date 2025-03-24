@@ -1,0 +1,11 @@
+@use '@scss_variables' as v;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  color: v.$txt-gray;
+}
