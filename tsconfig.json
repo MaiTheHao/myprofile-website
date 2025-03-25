@@ -26,7 +26,8 @@
       "@hooks": ["hooks/index.ts"],
       "@interfaces": ["interfaces/index.ts"],
       "@scss_variables": ["styles/_variables.scss"],
-      "@scss_mixin": ["styles/_mixin.scss"]
+      "@scss_mixin": ["styles/_mixin.scss"],
+      "@contexts": ["contexts/"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

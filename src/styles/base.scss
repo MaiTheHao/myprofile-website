@@ -8,6 +8,24 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: v.$unit; 
+}
+
+::-webkit-scrollbar-track {
+  background: v.$bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: v.$bg-accent;
+  border-radius: v.$border-radius-sm;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: v.$txt-light-gray;
+}
+
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

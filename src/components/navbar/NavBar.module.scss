@@ -1,6 +1,8 @@
 @use '@scss_variables' as v;
 
 .container {
+  user-select: none;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -33,9 +35,85 @@
     }
 
     @keyframes bigger {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .wrapper {
+    position: relative;
+
+    svg {
+      cursor: pointer;
+      font-size: v.$fz-huge;
+      transition: transform 0.15s ease-out;
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+
+    .wrapper_items {
+      z-index: 1;
+      position: fixed;
+      min-width: 30vw;
+      width: max-content;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      transform: translate(-150vw);
+      transition: transform 0.5s ease-in;
+
+      padding: v.$unit;
+      background-color: v.$bg-primary;
+
+      display: flex;
+      flex-direction: column;
+      gap: v.$unit * 2;
+
+      &_show {
+        transform: translate(0);
+        transition: transform 0.5s ease-out;
+      }
+
+      li {
+        width: 100%;
+        border-bottom: 1px solid v.$txt-gray;
+        padding: (v.$unit / 2) (v.$unit);
+
+        &:not(.wrapper_item_activated) {
+          cursor: pointer;
+          transition: all 0.15s ease-out;
+
+          &:hover {
+            background-color: v.$bg-secondary;
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+
+        &.wrapper_item_activated {
+          background-color: v.$bg-tertiary;
+          color: v.$txt-white;
+
+          a {
+            cursor: default;
+          }
+        }
+
+        a {
+          display: block;
+        }
+      }
     }
   }
 }

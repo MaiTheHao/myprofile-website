@@ -13,8 +13,8 @@ function Home({}: Props) {
         <Image
           src={'/imgs/HomePage/User_Avatar.png'}
           alt="User Avatar"
-          width={500}
           quality={100}
+          width={500}
           height={500}
           priority
         />

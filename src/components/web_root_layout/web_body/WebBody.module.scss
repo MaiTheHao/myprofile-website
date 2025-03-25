@@ -1,6 +1,7 @@
 @use '@scss_variables' as v;
 
 .container{
+  z-index: 0;
   flex: 1;
   background-color: transparent;
   padding-top: 0;
@@ -9,4 +10,5 @@
 
 .block{
   padding: (v.$unit * 4) 0;
+  height: 100%;
 }

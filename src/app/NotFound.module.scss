@@ -1,9 +1,12 @@
 @use '@scss_variables' as v;
 
 .container{
+  position: relative;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: v.$unit * 3;
 
   .icon{

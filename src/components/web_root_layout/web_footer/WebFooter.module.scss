@@ -1,6 +1,8 @@
 @use '@scss_variables' as v;
+@use 'sass:map';
 
 .container {
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,4 +10,11 @@
 
 .copyright {
   color: v.$txt-gray;
+}
+
+@media screen and (width <= map.get(v.$breakpoints, 'md')) {
+  .container{
+    flex-direction: column-reverse;
+    gap: v.$spacing-sm;
+  }
 }

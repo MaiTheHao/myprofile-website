@@ -1,14 +1,14 @@
-import "@/styles/base.scss";
-import "@/styles/global.scss";
+import '@/styles/base.scss';
+import '@/styles/global.scss';
 
 import { Metadata } from 'next';
 import React from 'react';
 import { tektur } from './fonts';
 
-import WebHeader from "@components/web_root_layout/web_header/WebHeader";
-import WebBody from "@components/web_root_layout/web_body/WebBody";
-import WebFooter from "@components/web_root_layout/web_footer/WebFooter";
-import RootLoadingPage from "./loading";
+import WebHeader from '@components/web_root_layout/web_header/WebHeader';
+import WebBody from '@components/web_root_layout/web_body/WebBody';
+import WebFooter from '@components/web_root_layout/web_footer/WebFooter';
+import AppContexts from '@/contexts/AppContexts';
 
 export const metadata: Metadata = {
   title: 'Neo Profile',
@@ -34,9 +34,11 @@ function layout({ children }: Props) {
         <meta charSet="utf-8" />
       </head>
       <body id="root" className={`${tektur.className}`}>
-        <WebHeader />
-        <WebBody>{children}</WebBody>
-        <WebFooter />
+        <AppContexts>
+          <WebHeader />
+          <WebBody>{children}</WebBody>
+          <WebFooter />
+        </AppContexts>
       </body>
     </html>
   );

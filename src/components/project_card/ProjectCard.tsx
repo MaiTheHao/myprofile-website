@@ -27,8 +27,8 @@ function ProjectCard({
               <Image
                 alt={title}
                 src={imageUrl}
-                layout="fill"
-                style={{ objectFit: 'cover' }}
+                fill
+                style={{objectFit: "cover"}}
                 onLoad={() => setImageLoaded(true)}
                 className={
                   imageLoaded ? styles.image_loaded : styles.image_loading

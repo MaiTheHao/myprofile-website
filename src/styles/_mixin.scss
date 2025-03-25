@@ -1,10 +1,19 @@
 @use '@scss_variables' as v;
+@use 'sass:map';
 
 @mixin title($font-size, $font-weight) {
   font-size: $font-size;
   font-weight: $font-weight;
   color: v.$btn-1-normal;
   text-transform: capitalize;
+}
+
+@mixin title_normal {
+  @include title(v.$fz-large, v.$font-semibold);
+}
+
+@mixin title_large {
+  @include title(v.$fz-huge, v.$font-semibold);
 }
 
 @mixin HL_title_normal {
@@ -55,13 +64,13 @@
   margin: 0 auto;
 }
 
-@mixin breakpoint ( $breakpoint )
+@mixin breakpoint($Lbreakpoint, $Rbreakpoint)
 {
-  @if map-has-key(v.$breakpoints, $breakpoint) {
-    @media screen and (min-width: map-get(v.$breakpoints, $breakpoint)) {
+  @if map.has-key(v.$breakpoints, $Lbreakpoint) and map.has-key(v.$breakpoints, $Rbreakpoint) {
+    @media screen and (width >= map.get(v.$breakpoints, $Lbreakpoint)) and (width <= map.get(v.$breakpoints, $Rbreakpoint)) {
       @content;
     }
   } @else {
-    @error "Invalid breakpoint: #{$breakpoint}. Must be one of: #{map-keys(v.$breakpoints)}";
+    @error "Invalid breakpoint: #{$Lbreakpoint} or #{$Rbreakpoint}. Must be one of: #{map.keys(v.$breakpoints)}";
   }
-}
+} 

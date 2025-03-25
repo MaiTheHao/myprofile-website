@@ -1,9 +1,18 @@
 @use '@scss_variables' as v;
 @use '@scss_mixin' as *;
 
+$image-size: clamp(280px, 50vw, 500px);
+
 .container {
   position: relative;
   @include flex-row(left, flex-end, v.$spacing-xl);
+
+  .left {
+    img {
+      width: $image-size;
+      height: $image-size;
+    }
+  }
 
   .right {
     @include flex-column(left, flex-start, v.$spacing-md);
@@ -21,6 +30,34 @@
         &_detail {
           font-size: v.$fz-normal;
           color: v.$txt-gray;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width <= map-get(v.$breakpoints, 'md')) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .right {
+      align-items: center;
+
+      &_contents {
+        .content {
+          align-items: center;
+
+          &_title {
+            &::after {
+              display: none;
+            }
+          }
+
+          &_detail {
+            text-align: center;
+          }
         }
       }
     }

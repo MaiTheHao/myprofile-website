@@ -1,6 +1,7 @@
 @use '@scss_variables' as v;
 
 .container {
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;

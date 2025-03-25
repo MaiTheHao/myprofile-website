@@ -1,5 +1,6 @@
 @use '@scss_mixin' as *;
 @use '@scss_variables' as v;
+@use 'sass:map';
 
 .container {
   position: relative;
@@ -23,8 +24,12 @@
 }
 
 .filter_section {
+  user-select: none;
+  position: relative;
   width: 100%;
-  @include flex-row(flex-start, center, v.$spacing-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$spacing-sm;
 
   .filter_button {
     padding: v.$spacing-xs v.$spacing-sm;
@@ -33,6 +38,7 @@
     border-radius: v.$border-radius-sm;
     color: v.$txt-gray;
     font-size: v.$fz-normal;
+    text-wrap: nowrap;
     cursor: pointer;
     transition: all 0.3s ease;
 
@@ -52,27 +58,18 @@
 .portfolio_items {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax((v.$unit * 70), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: v.$spacing-lg;
 }
 
-// Media queries for responsive layout
-@media screen and (max-width: 768px) {
+@include breakpoint('md', 'lg') {
+  .portfolio_items {
+    gap: v.$spacing-md;
+  }
+}
+
+@media screen and (width <= map.get(v.$breakpoints, 'sm')) {
   .portfolio_items {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-
-  .filter_section {
-    overflow-x: auto;
-    padding-bottom: v.$spacing-sm;
-
-    &::-webkit-scrollbar {
-      height: 4px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: v.$bg-tertiary;
-      border-radius: 4px;
-    }
   }
 }
