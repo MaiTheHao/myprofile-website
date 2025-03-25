@@ -85,21 +85,23 @@ export const PORTFOLIO_INFO: PortfolioInfo = {
   projects: [
     {
       id: 1,
-      title: 'E-commerce Website',
+      title: 'Neo-Profile Website',
       category: 'Web Development',
-      imageUrl: '/imgs/Default/Project.jpg',
+      imageUrl: '/imgs/Portfolio/My_Profile.jpg',
       description:
-        'A full-featured e-commerce platform with payment integration',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      link: 'https://example.com/project1',
+        'A personal website designed to showcase my skills, projects, and career journey while connecting with professionals in the tech industry.',
+      technologies: ['Next.js', 'Figma', 'Vercel'],
+      link: 'https://neo-profile.vercel.app/home',
     },
-  {
+    {
       id: 2,
-      title: 'Mobile Banking App',
-      category: 'App Development',
-      imageUrl: '/imgs/Default/Project.jpg',
-      description: 'Secure banking application with biometric authentication',
-      technologies: ['Flutter', 'Firebase', 'REST API'],
+      title: 'Van Nang Mechanical Ltd. Landing Page',
+      category: 'Web Development',
+      imageUrl: '/imgs/Portfolio/Van_Nang.jpg',
+      description:
+        'A marketing landing page designed to attract investors and enhance brand awareness for Van Nang Mechanical Ltd. I was responsible for both design and development.',
+      technologies: ['Next.js', 'Figma', 'MongoDB', 'Vercel'],
+      link: 'https://vannang.vercel.app/landing',
     },
     {
       id: 3,
