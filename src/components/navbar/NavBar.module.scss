@@ -63,7 +63,7 @@
     .wrapper_items {
       z-index: 1;
       position: fixed;
-      min-width: 30vw;
+      min-width: 45vw;
       width: max-content;
       top: 0;
       bottom: 0;
@@ -86,7 +86,7 @@
       li {
         width: 100%;
         border-bottom: 1px solid v.$txt-gray;
-        padding: (v.$unit / 2) (v.$unit);
+        padding: calc(v.$unit / 2) (v.$unit);
 
         &:not(.wrapper_item_activated) {
           cursor: pointer;
