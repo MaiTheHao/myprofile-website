@@ -13,8 +13,6 @@ const chooseSocialMediaStyleClass = (title: string) => {
   title = title.toLowerCase();
   title = title.trim();
 
-  console.log(title);
-
   switch (title) {
     case 'facebook':
       return styles.facebook;

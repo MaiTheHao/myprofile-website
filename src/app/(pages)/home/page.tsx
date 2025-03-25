@@ -16,6 +16,7 @@ function Home({}: Props) {
           width={500}
           quality={100}
           height={500}
+          priority
         />
       </div>
       <div className={styles.right}>

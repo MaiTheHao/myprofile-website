@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ProjectCard.module.scss';
 import Image from 'next/image';
 import { ProjectCard as ProjectCardInterface } from '@/interfaces';
+import Link from 'next/link';
 
 export type ProjectCardProps = ProjectCardInterface;
 
@@ -34,14 +35,14 @@ function ProjectCard({
           ))}
         </div>
         {link && (
-          <a
+          <Link
             href={link}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.view_project}
           >
             View Project
-          </a>
+          </Link>
         )}
       </div>
     </div>

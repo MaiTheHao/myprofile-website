@@ -1,8 +1,8 @@
-import { SocialMedia } from '@/interfaces';
+import { SocialMedia, NavPage } from '@/interfaces';
 import { SOCIAL_MEDIA } from './user';
 import { Facebook, Github, Google, LinkedIn, Twitter } from '@components/icons';
 
-export const PAGES = [
+export const PAGES: NavPage[] = [
   { title: 'Home', path: '/home' },
   {
     title: 'About',

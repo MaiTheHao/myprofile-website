@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Neo Profile',
   description:
     "Welcome to Neo's personal website! This platform serves as a hub to enhance my personal brand and connect with like-minded professionals in the tech industry. Through this, I aim to expand my network, engage with fellow engineers, and grow as a well-rounded software engineer.",
-  icons: '/favicon.ico',
+  icons: '/imgs/HomePage/User_Avatar.png',
 };
 
 export const viewport = {

@@ -18,6 +18,7 @@ async function page() {
             src="/imgs/About/Top_Section.png"
             width={600}
             height={350}
+            priority
           />
         </div>
         <div className={styles.about_me}>

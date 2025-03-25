@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Button.module.scss';
+import Link from 'next/link';
 
 export type ButtonBaseProps = {
   title: string;
@@ -10,9 +11,9 @@ export type ButtonBaseProps = {
 
 function BaseButton({ title, customClass, onClick, href = '#' }: ButtonBaseProps) {
   return href !== '#' ? (
-    <a href={href} className={`${styles.container} ${customClass}`} onClick={onClick}>
+    <Link href={href} className={`${styles.container} ${customClass}`} onClick={onClick}>
       <span>{title}</span>
-    </a>
+    </Link>
   ) : (
     <button className={`${styles.container} ${customClass}`} onClick={onClick}>
       <span>{title}</span>

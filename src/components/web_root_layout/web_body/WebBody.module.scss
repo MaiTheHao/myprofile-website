@@ -1,6 +1,6 @@
 @use '@scss_variables' as v;
 
 .container{
+  flex: 1;
   padding: (v.$unit * 4) 0;
-  min-height: 90dvh;
 }

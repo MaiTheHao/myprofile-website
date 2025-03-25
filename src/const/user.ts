@@ -1,4 +1,12 @@
-export const USER_INFO = {
+import {
+  UserInfo,
+  SocialMediaLinks,
+  CareerInfo,
+  PortfolioInfo,
+} from '@/interfaces';
+
+// User information
+export const USER_INFO: UserInfo = {
   name: 'Mai The Hao',
   nickname: 'Neo',
   birth: new Date(2006, 12, 5),
@@ -27,7 +35,8 @@ export const USER_INFO = {
   ],
 };
 
-export const SOCIAL_MEDIA = {
+// Social media links
+export const SOCIAL_MEDIA: SocialMediaLinks = {
   facebook: 'https://www.facebook.com/obistack.bilo',
   github: 'https://github.com/MaiTheHao',
   google: 'anhchangnhanma167@gmail.com',
@@ -35,7 +44,8 @@ export const SOCIAL_MEDIA = {
   linkedin: 'https://www.linkedin.com',
 };
 
-export const CAREER_INFO = {
+// Career information
+export const CAREER_INFO: CareerInfo = {
   currentRole: {
     title: 'Recent Role',
     detail:
@@ -68,4 +78,43 @@ export const CAREER_INFO = {
     'Love music, play the piano, and enjoy drawing.',
     'Lead pianist in performing arts events.',
   ],
+};
+
+// Portfolio information
+export const PORTFOLIO_INFO: PortfolioInfo = {
+  projects: [
+    {
+      id: 1,
+      title: 'E-commerce Website',
+      category: 'Web Development',
+      imageUrl: '/imgs/Default/Project.jpg',
+      description:
+        'A full-featured e-commerce platform with payment integration',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      link: 'https://example.com/project1',
+    },
+  {
+      id: 2,
+      title: 'Mobile Banking App',
+      category: 'App Development',
+      imageUrl: '/imgs/Default/Project.jpg',
+      description: 'Secure banking application with biometric authentication',
+      technologies: ['Flutter', 'Firebase', 'REST API'],
+    },
+    {
+      id: 3,
+      title: 'Portfolio Website',
+      category: 'Web Design',
+      imageUrl: '/imgs/Default/Project.jpg',
+      description: 'Responsive portfolio website with modern design',
+      technologies: ['Next.js', 'SCSS', 'Framer Motion'],
+      link: 'https://example.com/project3',
+    },
+  ],
+  categories: ['All', 'Web Development', 'App Development', 'Design'],
+  pageContent: {
+    title: 'My Portfolio',
+    description:
+      'Showcasing my recent projects and works. Each project represents my skills, problem-solving abilities, and passion for creating impactful solutions.',
+  },
 };

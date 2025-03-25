@@ -1,12 +1,13 @@
 @use '@scss_variables' as v;
 
 .web_layout_comp {
-  min-width: 100vw;
+  width: 100vw;
   padding: (v.$unit * 2) 0;
   background-color: v.$bg-secondary;
 }
 
 .web_layout_comp_block {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
