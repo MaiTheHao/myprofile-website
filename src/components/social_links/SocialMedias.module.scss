@@ -1,6 +1,6 @@
 @use '@scss_variables' as v;
 
-$icon_padding: v.$unit * 0.2;
+$icon_padding: v.$unit * .5;
 
 .list {
   position: relative;

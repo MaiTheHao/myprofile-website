@@ -2,11 +2,8 @@
 import React, { useState } from 'react';
 import styles from './Portfolio.module.scss';
 import ProjectCard from '@/components/project_card/ProjectCard';
-import {
-  PORTFOLIO_PAGE_CONTENT,
-  PORTFOLIO_FILTERS,
-  PORTFOLIO_ITEMS,
-} from '@/const/pages/portfolio';
+import { PORTFOLIO_CATEGORIES, PORTFOLIO_ITEMS } from '@/const/pages/portfolio';
+import { isEqualStr, notEqualStr } from '@/utils';
 
 type Props = {};
 
@@ -14,24 +11,23 @@ function Portfolio({}: Props) {
   const [activeFilters, setActiveFilters] = useState<string[]>(['All']);
 
   const handleFilterClick = (filter: string) => {
-    if (filter === 'All') {
-      // If "All" is clicked, reset to only "All"
+    if (isEqualStr(filter, 'All')) {
       setActiveFilters(['All']);
     } else {
-      // If any other filter is clicked
       setActiveFilters((prevFilters) => {
-        // If "All" is currently selected, remove it
-        const filtersWithoutAll = prevFilters.filter((f) => f !== 'All');
-
-        // Check if the filter is already selected
+        const filtersWithoutAll = prevFilters.filter((f) =>
+          notEqualStr(f, 'All'),
+        );
         if (filtersWithoutAll.includes(filter)) {
-          // Remove the filter if it's already selected
-          const result = filtersWithoutAll.filter((f) => f !== filter);
-          // If no filters left, default to "All"
+          const result = filtersWithoutAll.filter((f) =>
+            notEqualStr(f, filter),
+          );
           return result.length ? result : ['All'];
         } else {
-          // Add the new filter
-          return [...filtersWithoutAll, filter];
+          const newFilters = [...filtersWithoutAll, filter];
+          return newFilters.length === PORTFOLIO_CATEGORIES.length - 1
+            ? ['All']
+            : newFilters;
         }
       });
     }
@@ -44,16 +40,16 @@ function Portfolio({}: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.portfolio_header}>
-        <h1 className={styles.portfolio_title}>
-          {PORTFOLIO_PAGE_CONTENT.title}
-        </h1>
+        <h1 className={styles.portfolio_title}>My Portfolio</h1>
         <p className={styles.portfolio_description}>
-          {PORTFOLIO_PAGE_CONTENT.description}
+          Showcasing my recent projects and works. Each project represents my
+          skills, problem-solving abilities, and passion for creating impactful
+          solutions.
         </p>
       </div>
 
       <div className={styles.filter_section}>
-        {PORTFOLIO_FILTERS.map((filter) => (
+        {PORTFOLIO_CATEGORIES.map((filter) => (
           <button
             key={filter}
             className={`${styles.filter_button} ${

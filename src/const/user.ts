@@ -1,12 +1,7 @@
-import {
-  UserInfo,
-  SocialMediaLinks,
-  CareerInfo,
-  PortfolioInfo,
-} from '@/interfaces';
+import { UserInfo, SocialMediaLinks, CareerInfo } from '@/interfaces';
 
 // User information
-export const USER_INFO: UserInfo = {
+export const BASE_INFO: UserInfo = {
   name: 'Mai The Hao',
   nickname: 'Neo',
   birth: new Date(2006, 12, 5),
@@ -78,45 +73,4 @@ export const CAREER_INFO: CareerInfo = {
     'Love music, play the piano, and enjoy drawing.',
     'Lead pianist in performing arts events.',
   ],
-};
-
-// Portfolio information
-export const PORTFOLIO_INFO: PortfolioInfo = {
-  projects: [
-    {
-      id: 1,
-      title: 'Neo-Profile Website',
-      category: 'Web Development',
-      imageUrl: '/imgs/Portfolio/My_Profile.jpg',
-      description:
-        'A personal website designed to showcase my skills, projects, and career journey while connecting with professionals in the tech industry.',
-      technologies: ['Next.js', 'Figma', 'Vercel'],
-      link: 'https://neo-profile.vercel.app/home',
-    },
-    {
-      id: 2,
-      title: 'Van Nang Mechanical Ltd. Landing Page',
-      category: 'Web Development',
-      imageUrl: '/imgs/Portfolio/Van_Nang.jpg',
-      description:
-        'A marketing landing page designed to attract investors and enhance brand awareness for Van Nang Mechanical Ltd. I was responsible for both design and development.',
-      technologies: ['Next.js', 'Figma', 'MongoDB', 'Vercel'],
-      link: 'https://vannang.vercel.app/landing',
-    },
-    {
-      id: 3,
-      title: 'Portfolio Website',
-      category: 'Web Design',
-      imageUrl: '/imgs/Default/Project.jpg',
-      description: 'Responsive portfolio website with modern design',
-      technologies: ['Next.js', 'SCSS', 'Framer Motion'],
-      link: 'https://example.com/project3',
-    },
-  ],
-  categories: ['All', 'Web Development', 'App Development', 'Design'],
-  pageContent: {
-    title: 'My Portfolio',
-    description:
-      'Showcasing my recent projects and works. Each project represents my skills, problem-solving abilities, and passion for creating impactful solutions.',
-  },
 };

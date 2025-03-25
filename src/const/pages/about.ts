@@ -1,7 +1,7 @@
-import { USER_INFO, CAREER_INFO } from '../user';
+import { BASE_INFO, CAREER_INFO } from '../user';
 
 export const ABOUT_SECTIONS = {
-  personalInfo: USER_INFO.personalInfo,
+  personalInfo: BASE_INFO.personalInfo,
 
   columns: {
     left: [

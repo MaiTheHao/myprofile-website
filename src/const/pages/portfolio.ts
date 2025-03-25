@@ -1,6 +1,44 @@
-import { ProjectCard as ProjectCardInterface } from '@/interfaces';
-import { PORTFOLIO_INFO } from '../user';
+import {
+  ProjectCard as ProjectCardInterface,
+} from '@/interfaces';
 
-export const PORTFOLIO_PAGE_CONTENT = PORTFOLIO_INFO.pageContent;
-export const PORTFOLIO_FILTERS = PORTFOLIO_INFO.categories;
-export const PORTFOLIO_ITEMS: ProjectCardInterface[] = PORTFOLIO_INFO.projects;
+// Projects
+export const PORTFOLIO_ITEMS: ProjectCardInterface[] = [
+  {
+    id: 1,
+    title: 'Neo-Profile Website',
+    category: 'Web Development',
+    imageUrl: '/imgs/Portfolio/My_Profile.jpg',
+    description:
+      'A personal website designed to showcase my skills, projects, and career journey while connecting with professionals in the tech industry.',
+    technologies: ['Next.js', 'Figma', 'Vercel'],
+    link: 'https://neo-profile.vercel.app/home',
+  },
+  {
+    id: 2,
+    title: 'Van Nang Mechanical Ltd. Landing Page',
+    category: 'Web Development',
+    imageUrl: '/imgs/Portfolio/Van_Nang.jpg',
+    description:
+      'A marketing landing page designed to attract investors and enhance brand awareness for Van Nang Mechanical Ltd. I was responsible for both design and development.',
+    technologies: ['Next.js', 'Figma', 'MongoDB', 'Vercel'],
+    link: 'https://vannang.vercel.app/landing',
+  },
+  {
+    id: 3,
+    title: 'Portfolio Website',
+    category: 'Web Design',
+    imageUrl: '/imgs/Default/Project.jpg',
+    description: 'Responsive portfolio website with modern design',
+    technologies: ['Next.js', 'SCSS', 'Framer Motion'],
+    link: 'https://example.com/project3',
+  },
+];
+
+// Generate categories array
+export const PORTFOLIO_CATEGORIES: string[] = ['All'];
+PORTFOLIO_ITEMS.map(({ category }, _index) => {
+  if (PORTFOLIO_CATEGORIES.indexOf(category) === -1) {
+    PORTFOLIO_CATEGORIES.push(category);
+  }
+});
