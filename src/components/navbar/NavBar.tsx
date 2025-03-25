@@ -34,14 +34,17 @@ function NavBar({ pages }: Props) {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (WrapperItemRef.current && !WrapperItemRef.current.contains(event.target as Node)) {
+      if (
+        WrapperItemRef.current &&
+        !WrapperItemRef.current.contains(event.target as Node)
+      ) {
         setOpenMenu(false);
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [])
+  }, []);
 
   return (
     <div className={`${styles.container}`}>
@@ -61,21 +64,23 @@ function NavBar({ pages }: Props) {
       ) : (
         <div className={styles.wrapper}>
           <FontAwesomeIcon icon={faBars} onClick={() => handleOpenMenu()} />
-          <ul ref={WrapperItemRef} className={clsx(styles.wrapper_items, {
-            [styles.wrapper_items_show]: openMenu,
-          })}>
+          <ul
+            ref={WrapperItemRef}
+            className={clsx(styles.wrapper_items, {
+              [styles.wrapper_items_show]: openMenu,
+            })}
+          >
             {pages.map(({ title, path }, index) => (
-              <li className={clsx(
-                {
-                  [styles.wrapper_item_activated]: path === currentPath
-                }
-              )}>
+              <li
+                key={`minimize-${title}-${index}`}
+                className={clsx({
+                  [styles.wrapper_item_activated]: path === currentPath,
+                })}
+              >
                 <Link
                   href={path}
                   key={`minimize-${title}-index`}
-                  className={clsx(styles.wrapper_item, {
-                    
-                  })}
+                  className={clsx(styles.wrapper_item, {})}
                 >
                   <span>{title}</span>
                 </Link>

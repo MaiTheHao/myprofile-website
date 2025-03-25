@@ -1,4 +1,5 @@
 @use '@scss_variables' as v;
+@use 'sass:map';
 
 .container {
   z-index: 1;
@@ -27,4 +28,20 @@
     font-size: v.$fz-normal;
     font-weight: v.$font-regular;
   }
+}
+
+@media screen and (width <= map.get(v.$breakpoints, 'sm')) {
+  .logo {
+  &_category {
+    font-size: v.$fz-small;
+  }
+
+  &_name {
+    font-size: v.$fz-large;
+  }
+
+  &_location {
+    font-size: v.$fz-small;
+  }
+}
 }
