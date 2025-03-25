@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import styles from './ProjectCard.module.scss';
 import Image from 'next/image';
 import { ProjectCard as ProjectCardInterface } from '@/interfaces';
@@ -14,12 +15,26 @@ function ProjectCard({
   technologies,
   link,
 }: ProjectCardProps) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div className={styles.portfolio_item}>
       <div className={styles.item_image}>
         <div className={styles.image_placeholder}>
           {imageUrl && (
-            <Image alt={title} src={imageUrl} layout="fill" objectFit="cover" />
+            <>
+              {!imageLoaded && <div className={styles.image_skeleton}></div>}
+              <Image
+                alt={title}
+                src={imageUrl}
+                layout="fill"
+                style={{ objectFit: 'cover' }}
+                onLoad={() => setImageLoaded(true)}
+                className={
+                  imageLoaded ? styles.image_loaded : styles.image_loading
+                }
+              />
+            </>
           )}
         </div>
       </div>

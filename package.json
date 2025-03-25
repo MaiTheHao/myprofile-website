@@ -6,7 +6,8 @@
     "dev": "next dev -p 4040 -H 0.0.0.0 --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:prod": "pnpm build && pnpm start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

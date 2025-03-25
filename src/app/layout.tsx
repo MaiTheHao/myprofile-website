@@ -8,6 +8,7 @@ import { tektur } from './fonts';
 import WebHeader from "@components/web_root_layout/web_header/WebHeader";
 import WebBody from "@components/web_root_layout/web_body/WebBody";
 import WebFooter from "@components/web_root_layout/web_footer/WebFooter";
+import RootLoadingPage from "./loading";
 
 export const metadata: Metadata = {
   title: 'Neo Profile',
