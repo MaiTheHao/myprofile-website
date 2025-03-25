@@ -34,16 +34,18 @@ function SocialMedias({ SocialMedias }: Props) {
     <div className={styles.list}>
       {SocialMedias.map(({ title, Icon, url }, index) =>
         Icon ? (
-          <Link
+            <Link
             href={url}
             className={`${styles.media} ${chooseSocialMediaStyleClass(title)}`}
             key={`social-link-${btoa(url)}`}
-          >
+            target='_blank'
+            rel="noopener noreferrer"
+            >
             <Icon 
               width={16}
               height={16}
             />
-          </Link>
+            </Link>
         ) : null,
       )}
     </div>
