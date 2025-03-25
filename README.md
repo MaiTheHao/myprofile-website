@@ -7,6 +7,7 @@ Welcome to **Neo's** personal website! This platform serves as a hub to enhance 
 ## 🎯 Objectives
 
 This website is designed to:
+
 ✅ **Establish my personal brand** and strengthen my professional presence.  
 ✅ **Provide key insights** into my skills, experience, and career aspirations.  
 ✅ **Showcase my portfolio**, offering a detailed view of my projects.  
@@ -15,6 +16,7 @@ This website is designed to:
 ## 📌 Key Features
 
 The website consists of three main pages:
+
 🔹 **Home** – Highlights my current role, career aspirations, and future goals.  
 🔹 **About** – Offers in-depth details relevant to recruitment, including skills, work experience, professional journey, and career direction.  
 🔹 **Portfolio** – Displays my projects with comprehensive details for visitors to explore.
@@ -35,5 +37,10 @@ Feel free to connect or explore potential collaborations through:
 - **GitHub:** [github.com/MaiTheHao](https://github.com/MaiTheHao)  
 - **Facebook:** [facebook.com/obistack.bilo](https://www.facebook.com/obistack.bilo)  
 
+## 🙏 Acknowledgments
 
 Thank you for visiting my website! 🚀
+
+Planned, designed, and implemented by [Neo](https://github.com/MaiTheHao)
+
+Thank you for your interest! 🚀
