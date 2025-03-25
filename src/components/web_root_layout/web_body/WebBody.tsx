@@ -7,8 +7,10 @@ type Props = {
 
 function WebBody({children}: Props) {
   return (
-    <div className={`web_layout_comp_block ${styles.container}`}>
-      {children}
+    <div className={`web_layout_comp ${styles.container}`}>
+      <div className={`web_layout_comp_block ${styles.block}`}>
+        {children}
+      </div>
     </div>
   );
 }

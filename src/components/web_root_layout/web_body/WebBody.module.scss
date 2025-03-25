@@ -2,5 +2,11 @@
 
 .container{
   flex: 1;
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.block{
   padding: (v.$unit * 4) 0;
 }

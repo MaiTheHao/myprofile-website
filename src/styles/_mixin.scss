@@ -54,3 +54,14 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+@mixin breakpoint ( $breakpoint )
+{
+  @if map-has-key(v.$breakpoints, $breakpoint) {
+    @media screen and (min-width: map-get(v.$breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}. Must be one of: #{map-keys(v.$breakpoints)}";
+  }
+}

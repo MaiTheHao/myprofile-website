@@ -21,10 +21,10 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/node": "^20.17.25",
+    "@types/react": "^19.0.12",
     "@types/react-dom": "^19",
     "sass": "^1.86.0",
-    "typescript": "^5"
+    "typescript": "^5.8.2"
   }
 }

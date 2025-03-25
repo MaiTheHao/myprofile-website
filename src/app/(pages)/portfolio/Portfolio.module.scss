@@ -3,14 +3,12 @@
 
 .container {
   position: relative;
-  @include flex-column(flex-start, flex-start, v.$unit * 5);
-  @include section-padding;
+  @include flex-column(flex-start, flex-start, v.$unit * 10);
 }
 
 .portfolio_header {
   width: 100%;
   @include flex-column(flex-start, flex-start, v.$spacing-md);
-  margin-bottom: v.$spacing-lg;
 
   .portfolio_title {
     @include HL_title_large;
@@ -27,7 +25,6 @@
 .filter_section {
   width: 100%;
   @include flex-row(flex-start, center, v.$spacing-md);
-  margin-bottom: v.$spacing-lg;
 
   .filter_button {
     padding: v.$spacing-xs v.$spacing-sm;
@@ -55,7 +52,7 @@
 .portfolio_items {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax((v.$unit * 70), 1fr));
   gap: v.$spacing-lg;
 }
 
