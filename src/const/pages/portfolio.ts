@@ -12,7 +12,7 @@ export const PORTFOLIO_ITEMS: ProjectCardInterface[] = [
 		link: 'https://neo-profile.vercel.app/home',
 	},
 	{
-		id: 4,
+		id: 2,
 		title: 'Huni E-Commerce Website',
 		category: 'Web Development',
 		imageUrl: '/imgs/Portfolio/Huni_E_Commerce.png',
@@ -22,22 +22,13 @@ export const PORTFOLIO_ITEMS: ProjectCardInterface[] = [
 		link: 'https://huni-e-commerce.vercel.app',
 	},
 	{
-		id: 2,
+		id: 3,
 		title: 'Van Nang Mechanical Ltd. Landing Page',
 		category: 'Web Development',
 		imageUrl: '/imgs/Portfolio/Van_Nang.jpg',
 		description: 'A marketing landing page designed to attract investors and enhance brand awareness for Van Nang Mechanical Ltd. I was responsible for both design and development.',
 		technologies: ['Next.js', 'Figma', 'MongoDB', 'Vercel'],
 		link: 'https://vannang.vercel.app',
-	},
-	{
-		id: 3,
-		title: 'Portfolio Website',
-		category: 'Web Design',
-		imageUrl: '/imgs/Default/Project.jpg',
-		description: 'Responsive portfolio website with modern design',
-		technologies: ['Next.js', 'SCSS', 'Framer Motion'],
-		link: 'https://example.com/project3',
 	},
 ];
 
