@@ -7,7 +7,8 @@ export const PORTFOLIO_ITEMS: ProjectCardInterface[] = [
 		title: 'Neo-Profile Website',
 		category: 'Web Development',
 		imageUrl: '/imgs/Portfolio/My_Profile.jpg',
-		description: 'A personal website designed to showcase my skills, projects, and career journey while connecting with professionals in the tech industry.',
+		description:
+			'A personal website designed to showcase my skills, projects, and career journey while connecting with professionals in the tech industry.',
 		technologies: ['Next.js', 'Figma', 'Vercel'],
 		link: 'https://neo-profile.vercel.app/home',
 	},
@@ -26,9 +27,20 @@ export const PORTFOLIO_ITEMS: ProjectCardInterface[] = [
 		title: 'Van Nang Mechanical Ltd. Landing Page',
 		category: 'Web Development',
 		imageUrl: '/imgs/Portfolio/Van_Nang.jpg',
-		description: 'A marketing landing page designed to attract investors and enhance brand awareness for Van Nang Mechanical Ltd. I was responsible for both design and development.',
+		description:
+			'A marketing landing page designed to attract investors and enhance brand awareness for Van Nang Mechanical Ltd. I was responsible for both design and development.',
 		technologies: ['Next.js', 'Figma', 'MongoDB', 'Vercel'],
 		link: 'https://vannang.vercel.app',
+	},
+	{
+		id: 4,
+		title: 'InkFlow - Tattoo Studio Website (UI Only)',
+		category: 'Web Development',
+		imageUrl: '/imgs/Portfolio/InkFlow.jpg',
+		description:
+			'A modern frontend UI for a tattoo studio built with React and Vite. Features dynamic hero section, artist showcase, tattoo gallery, and fully responsive design with professional UI/UX. This is a UI-only implementation.',
+		technologies: ['React', 'Vite', 'Tailwind CSS', 'Vercel'],
+		link: 'https://uside-inkflow.vercel.app/',
 	},
 ];
 
