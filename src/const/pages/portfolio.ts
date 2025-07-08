@@ -36,7 +36,7 @@ export const PORTFOLIO_ITEMS: ProjectCardInterface[] = [
 		id: 4,
 		title: 'InkFlow - Tattoo Studio Website (UI Only)',
 		category: 'Web Development',
-		imageUrl: '/imgs/Portfolio/InkFlow.jpg',
+		imageUrl: '/imgs/Portfolio/Uside_InkFlow.png',
 		description:
 			'A modern frontend UI for a tattoo studio built with React and Vite. Features dynamic hero section, artist showcase, tattoo gallery, and fully responsive design with professional UI/UX. This is a UI-only implementation.',
 		technologies: ['React', 'Vite', 'Tailwind CSS', 'Vercel'],
